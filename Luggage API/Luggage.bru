@@ -1,0 +1,28 @@
+meta {
+  name: Luggage
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/luggage/
+  body: json
+  auth: none
+}
+
+headers {
+  X-CSRFToken: {{csrftoken}}
+}
+
+auth:basic {
+  username: admin
+  password: 12345
+}
+
+body:json {
+  {
+    "name": "Small-20",
+    "size": 20,
+    "unit": "cm"
+  }
+}
